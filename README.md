@@ -3,6 +3,8 @@
 This repository contains a collection of C programs with the goal of implementing the stack and queue data structures, implementing both Last-In-First-Out (LIFO) and First-In-First-Out (FIFO) behavior.
 In computer science these data structures can be used in various applications, from algorithm development to solving real-world problems. This is a project part of the ALX SE curriculum.
 
+## Contents
+
 - [Stacks](#stacks)
 - [Queues](#queues)
 - [Valuable Resources](#valuable-resources)

@@ -1,5 +1,7 @@
 #include "monty.h"
 
+FILE *file;
+
 /**
  * main - executes monty code
  * @argc: argument count
@@ -36,7 +38,7 @@ int main(int argc, char *argv[])
 		}
 		else
 		{
-			f_op = fhandle(args[0], line_count, &head);
+			f_op = hndl(args[0], line_count, &head);
 			if (f_op == NULL)
 			{
 				fprintf(stderr, "L%ld: unknown instruction %s\n",

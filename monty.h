@@ -10,7 +10,6 @@
 #include <sys/types.h>
 
 extern FILE *file;
-FILE *file;
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)

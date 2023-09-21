@@ -1,6 +1,12 @@
 #include "monty.h"
-#include <stdio.h>
 
+/**
+ * _isdigit - checks whether a string is a number
+ * @str: the string
+ *
+ * Return: 1 -> if it's a number
+ * ------- 0 -> if not
+*/
 int _isdigit(char *str)
 {
 	int i = 0;
@@ -11,7 +17,7 @@ int _isdigit(char *str)
 	for (; str[i]; i++)
 		if (str[i] < '0' || str[i] > '9')
 			return (0);
-	
+
 	return (1);
 }
 
@@ -22,16 +28,14 @@ int _isdigit(char *str)
  * @parameter: parameter for the push function
  *
  * Return: void
- * 
 */
 void push(stack_t **stack, unsigned int line_number, char *parameter)
 {
-
 	stack_t *new;
 
 	(void)line_number;
 
-	if (parameter == NULL || _isdigit(parameter) == 1)
+	if (parameter == NULL || _isdigit(parameter) == 0)
 	{
 		fprintf(stderr, "L%d: usage: push integer\n", line_number);
 		fclose(file);

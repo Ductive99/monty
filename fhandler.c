@@ -2,14 +2,14 @@
 #include <stdio.h>
 
 /**
- * fhandle - links operators to their functions
- * @op: the operator
- * @line: line count
- * @stack: pointer to pointer to the stack
+ * hndl - links operators to their functions
+ * @o: the operator
+ * @l: line count
+ * @pile: pointer to pointer to the stack
  *
  * Return: the corresponding function
 */
-void (*fhandle(char *op, unsigned int line, stack_t **stack))(stack_t**, unsigned int)
+void (*hndl(char *o, unsigned int l, stack_t **pile))(stack_t**, unsigned int)
 {
 	int i;
 	instruction_t operation[] = {
@@ -19,13 +19,13 @@ void (*fhandle(char *op, unsigned int line, stack_t **stack))(stack_t**, unsigne
 
 	for (i = 0; operation[i].opcode; i++)
 	{
-		if (strcmp(operation[i].opcode, op) == 0)
+		if (strcmp(operation[i].opcode, o) == 0)
 			return (operation[i].f);
 	}
 
-	fprintf(stderr, "L%u: unknown instruction %s\n", line, op);
+	fprintf(stderr, "L%u: unknown instruction %s\n", l, o);
 	fclose(file);
-	sfree(*stack);
+	sfree(*pile);
 	exit(EXIT_FAILURE);
 }
 

@@ -1,7 +1,4 @@
 #include "monty.h"
-#include <stdio.h>
-
-FILE *file;
 
 /**
  * main - executes monty code
@@ -10,7 +7,8 @@ FILE *file;
  *
  * Return: 0 if ran successfuly
 */
-int main(int argc, char *argv[]) {
+int main(int argc, char *argv[])
+{
 	void (*f_op)(stack_t **stack, unsigned int line_number);
 	char *s = NULL, *args[2], *parameter;
 	size_t line_count = 0, buffer = 1024;

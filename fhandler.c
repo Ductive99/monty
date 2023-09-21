@@ -16,6 +16,8 @@ void (*hndl(char *o, unsigned int l, stack_t **pile))(stack_t**, unsigned int)
 		{"pall", pall},
 		{"pint", pint},
 		{"pop", pop},
+		{"swap", swap},
+		{"add", add},
 		{NULL, NULL}
 	};
 
@@ -44,4 +46,25 @@ void sfree(stack_t *stack)
 		sfree(stack->next);
 		free(stack);
 	}
+}
+
+/**
+ * _isdigit - checks whether a string is a number
+ * @str: the string
+ *
+ * Return: 1 -> if it's a number
+ * ------- 0 -> if not
+*/
+int _isdigit(char *str)
+{
+	int i = 0;
+
+	if (str[i] == '-')
+		i++;
+
+	for (; str[i]; i++)
+		if (str[i] < '0' || str[i] > '9')
+			return (0);
+
+	return (1);
 }

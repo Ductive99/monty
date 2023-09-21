@@ -43,16 +43,19 @@ typedef struct instruction_s
 
 /* Function Declarations */
 
-	/* Operation / Memory Handling -> fhandler */
+	/* Various Handling functions -> fhandler */
 void (*hndl(char *o, unsigned int l, stack_t **pile))(stack_t**, unsigned int);
 void sfree(stack_t *stack);
-
-	/* Stack Functions -> fstack.c*/
 int _isdigit(char *str);
+
+	/* Stack Functions -> fstack.c - fstack2.c */
 void push(stack_t **stack, unsigned int line_number, char *parameter);
+void pop(stack_t **stack, unsigned int line_number);
 void pall(stack_t **stack, unsigned int line_number);
 void pint(stack_t **stack, unsigned int line_number);
-void pop(stack_t **stack, unsigned int line_number);
+
+void swap(stack_t **stack, unsigned int line_number);
+void add(stack_t **stack, unsigned int line_number);
 
 
 #endif /* MONTY_H */

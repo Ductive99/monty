@@ -15,6 +15,7 @@ void (*hndl(char *o, unsigned int l, stack_t **pile))(stack_t**, unsigned int)
 	instruction_t operation[] = {
 		{"pall", pall},
 		{"pint", pint},
+		{"pop", pop},
 		{NULL, NULL}
 	};
 

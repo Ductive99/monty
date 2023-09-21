@@ -104,3 +104,23 @@ void pint(stack_t **stack, unsigned int line_number)
 
 	printf("%d\n", (*stack)->n);
 }
+
+void pop(stack_t **stack, unsigned int line_number)
+{
+	stack_t *new_top;
+
+	if (!(*stack))
+	{
+		fprintf(stderr, "L%d: can't pop an empty stack\n", line_number);
+		fclose(file);
+		exit(EXIT_FAILURE);
+	}
+
+	new_top = (*stack)->next;
+	free(*stack);
+
+	if (new_top)
+		new_top->prev = NULL;
+
+	*stack = new_top;
+}

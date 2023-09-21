@@ -64,7 +64,7 @@ void mul(stack_t **stack, unsigned int line_number)
 }
 
 /**
- * div - divides the 2nd top element by the top element of a stack
+ * divide - divides the 2nd top element by the top element of a stack
  * @stack: pointer to pointer to the stack
  * @line_number: line number in execution
  *
@@ -78,14 +78,14 @@ void divide(stack_t **stack, unsigned int line_number)
 			fprintf(stderr, "L%u: division by zero\n", line_number);
 		else
 			fprintf(stderr, "L%u: can't mul, stack too short\n", line_number);
-		
+
 		fclose(file);
 		sfree(*stack);
 		exit(EXIT_FAILURE);
 	}
 
 	(*stack)->next->n /= (*stack)->n;
-	pop(stack, line_number);	
+	pop(stack, line_number);
 }
 
 /**
@@ -103,7 +103,7 @@ void mod(stack_t **stack, unsigned int line_number)
 			fprintf(stderr, "L%u: division by zero\n", line_number);
 		else
 			fprintf(stderr, "L%u: can't mul, stack too short\n", line_number);
-		
+
 		fclose(file);
 		sfree(*stack);
 		exit(EXIT_FAILURE);

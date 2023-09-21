@@ -68,7 +68,7 @@ void pall(stack_t **stack, unsigned int line_number)
  * @stack: pointer to pointer to (top of the) stack
  * @line_number: line number in execution
  *
- * Return: void 
+ * Return: void
 */
 void pint(stack_t **stack, unsigned int line_number)
 {
@@ -84,6 +84,13 @@ void pint(stack_t **stack, unsigned int line_number)
 	printf("%d\n", (*stack)->n);
 }
 
+/**
+ * pop - pops the top of the stack
+ * @stack: pointer to pointer to the stack
+ * @line_number: line number in execution
+ *
+ * Return: void
+*/
 void pop(stack_t **stack, unsigned int line_number)
 {
 	stack_t *new_top;

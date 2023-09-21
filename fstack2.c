@@ -37,3 +37,16 @@ void add(stack_t **stack, unsigned int line_number)
 	(*stack)->next->n += (*stack)->n;
 	pop(stack, line_number);
 }
+
+/**
+ * nop - doesn't do anything
+ * @stack: pointer to pointer to a stack
+ * @line_number: line number in execution
+ *
+ * Return: void
+*/
+void nop(stack_t **stack, unsigned int line_number)
+{
+	(void)stack;
+	(void)line_number;
+}

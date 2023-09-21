@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
 			break;
 		line_count++;
 		args[0] = strtok(s, " \n");
-		if (!args[0])
+		if (!args[0] || args[0][0] == '#')
 			continue;
 		else if (strcmp("push", args[0]) == 0)
 		{

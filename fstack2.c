@@ -24,20 +24,6 @@ void swap(stack_t **stack, unsigned int line_number)
 	(*stack)->next->n = temp;
 }
 
-void add(stack_t **stack, unsigned int line_number)
-{
-	if (!(*stack) || !((*stack)->next))
-	{
-		fprintf(stderr, "L%u: can't add, stack too short\n", line_number);
-		fclose(file);
-		sfree(*stack);
-		exit(EXIT_FAILURE);
-	}
-
-	(*stack)->next->n += (*stack)->n;
-	pop(stack, line_number);
-}
-
 /**
  * nop - doesn't do anything
  * @stack: pointer to pointer to a stack

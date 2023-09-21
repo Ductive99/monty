@@ -18,6 +18,10 @@ void (*hndl(char *o, unsigned int l, stack_t **pile))(stack_t**, unsigned int)
 		{"pop", pop},
 		{"swap", swap},
 		{"add", add},
+		{"sub", sub},
+		{"div", divide},
+		{"mul", mul},
+		{"mod", mod},
 		{"nop", nop},
 		{NULL, NULL}
 	};

@@ -48,15 +48,21 @@ void (*hndl(char *o, unsigned int l, stack_t **pile))(stack_t**, unsigned int);
 void sfree(stack_t *stack);
 int _isdigit(char *str);
 
-	/* Stack Functions -> fstack.c - fstack2.c */
+	/* Stack Functions -> fstack.c - fstack2.c fstack_math.c*/
 void push(stack_t **stack, unsigned int line_number, char *parameter);
 void pop(stack_t **stack, unsigned int line_number);
 void pall(stack_t **stack, unsigned int line_number);
 void pint(stack_t **stack, unsigned int line_number);
 
 void swap(stack_t **stack, unsigned int line_number);
-void add(stack_t **stack, unsigned int line_number);
 void nop(stack_t **stack, unsigned int line_number);
+
+void add(stack_t **stack, unsigned int line_number);
+void sub(stack_t **stack, unsigned int line_number);
+void mul(stack_t **stack, unsigned int line_number);
+void divide(stack_t **stack, unsigned int line_number);
+void mod(stack_t **stack, unsigned int line_number);
+
 
 
 #endif /* MONTY_H */

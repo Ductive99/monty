@@ -24,6 +24,7 @@ void (*hndl(char *o, unsigned int l, stack_t **pile))(stack_t**, unsigned int)
 		{"mod", mod},
 		{"pchar", pchar},
 		{"pstr", pstr},
+		{"rotl", rotl},
 		{"nop", nop},
 		{NULL, NULL}
 	};

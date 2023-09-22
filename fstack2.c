@@ -85,12 +85,38 @@ void rotl(stack_t **stack, unsigned int line_number)
 		return;
 	
 	while (temp->next)
-	{
 		temp = temp->next;
-	}
+
 	top->prev = temp;
 	temp->next = top;
 	*stack = top->next;
 	(*stack)->prev = NULL;
 	top->next = NULL;	
+}
+
+/**
+ * rotr - rotates the ends of the stack
+ * @stack: pointer to pointer to the stack
+ * @line_number: line number in execution
+ *
+ * Return: void
+*/
+void rotr(stack_t **stack, unsigned int line_number)
+{
+	stack_t *last = *stack, *secondlast;
+
+	(void)line_number;
+	if (!(*stack) || !(*stack)->next)
+		return;
+
+	while (last->next)
+		last = last->next;
+	secondlast = last->prev;
+
+    secondlast->next = NULL;
+    last->prev = NULL;
+
+    (*stack)->prev = last;
+    last->next = *stack;
+    *stack = last;
 }
